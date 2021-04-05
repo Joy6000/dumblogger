@@ -1,17 +1,10 @@
-let used = []
 let allOBJ = {}
 function log (message, show) {
-    let num = 0
     let ID = Math.floor(Math.random * 10000)
-    used.push(ID)
-    if (used) {
-        if (used.includes(ID)) {
-            ID = Math.floor(Math.random() * 10000)
-            used.push(ID)
-        }
-    }
-    console.log(message)
 
+    used.push(ID)
+
+    console.log(message)
 
     return new Promise((resolve, reject) => {
         consoleLog = {
