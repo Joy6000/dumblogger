@@ -2,6 +2,8 @@
 ## Installation
 #### With NPM 
 `npm install dumblogger`
+#### With yarn
+`yarn add dumblogger`
 ## Usage
 No promise
 ```js
