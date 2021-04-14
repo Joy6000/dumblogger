@@ -1,25 +1,22 @@
-let allOBJ = {}
-function log (message, show) {
-    let ID = Math.floor(Math.random * 10000)
-
-    used.push(ID)
-
+function log (...message) {
+    let ID = Math.floor(Math.random * 10000) + 10000
+    let now = Date.now()
     console.log(message)
+    let obj = {
+        content: message,
+        id: ID,
+        createdTimestamp: now 
+    }
+
 
     return new Promise((resolve, reject) => {
-        consoleLog = {
-            id: ID,
-            message: message,
-            time: new Date()
+        try {
+            resolve(obj)
+        } catch (err) {
+            reject('There was an error LOL')
+            console.log(err)
         }
-        let count = Object.keys(allOBJ).length ? Object.keys(allOBJ).length : 0
-        allOBJ[count] = consoleLog
-          if (show) {
-            console.log(allOBJ)
-        }
-        resolve(consoleLog)
     })
-
 }
 
 module.exports = log

@@ -8,11 +8,11 @@
 No promise
 ```js
 const log = require('dumblogger')
-log('Hello, World!', true) // If set to true it will also log the obj that contains all logged messages and their IDS for that process.
+log('Hello, World!') // Output: Hello, World!    Literally just console.log, it's barebones as of now.
 ```
 Promise
 ```js
 const log = require('dumblogger')
-log('Hello, World!').then(logged => console.log(logged)) //output: { id: Number, message: String, time: Date }
+log('Hello, World!').then(logged => console.log(logged)) //output: { content: String, id: Number, createdTimestamp: Date } 
 ```
 # Expect literally nothing from this
