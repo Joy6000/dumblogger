@@ -8,7 +8,7 @@ function log (...message) {
         createdTimestamp: now 
     }
 
-    // shitty promise handling LOL
+    //shitty promise handling LOL
     return new Promise((resolve, reject) => {
         try {
             resolve(obj)
